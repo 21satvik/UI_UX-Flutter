@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Dropdown extends StatelessWidget {
   const Dropdown({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class Dropdown extends StatelessWidget {
                 child: Text(
                   'Technical Indictors',
                   style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1!.color,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                   ),
@@ -34,10 +33,10 @@ class Dropdown extends StatelessWidget {
           onChanged: (_) {},
           dropdownColor: const Color.fromRGBO(18, 18, 18, 1),
           icon: Padding(
-            padding: EdgeInsets.only(right: 15),
+            padding: const EdgeInsets.only(right: 15),
             child: Icon(
               Icons.keyboard_arrow_down,
-              color: Theme.of(context).textTheme.bodyText1!.color,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
           ),

@@ -14,12 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: GoogleFonts.ibmPlexSans().fontFamily,
-        primaryColor: Colors.black,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(
-            color: Color.fromRGBO(255, 255, 255, 0.6),
-          ),
-        ),
+        primaryColor: const Color.fromRGBO(255, 255, 255, 0.6),
+        backgroundColor: Colors.black,
+        textTheme: GoogleFonts.ibmPlexSansTextTheme(const TextTheme(
+          bodyText1: TextStyle(color: Color.fromRGBO(255, 255, 255, 0.87)),
+        )),
       ),
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
