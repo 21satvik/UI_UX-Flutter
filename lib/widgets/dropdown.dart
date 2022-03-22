@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Dropdown extends StatelessWidget {
-  const Dropdown({Key? key}) : super(key: key);
+  final String title;
+
+  const Dropdown({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +16,13 @@ class Dropdown extends StatelessWidget {
         ),
         child: DropdownButton<String>(
           borderRadius: BorderRadius.circular(10),
-          items: const [
+          items: [
             DropdownMenuItem<String>(
               child: Padding(
                 padding: EdgeInsets.only(top: 9, bottom: 9, left: 12),
                 child: Text(
-                  'Exponential',
-                  style: TextStyle(
+                  title,
+                  style: const TextStyle(
                     color: Color.fromRGBO(255, 255, 255, 0.87),
                     fontWeight: FontWeight.w500,
                     fontSize: 14,

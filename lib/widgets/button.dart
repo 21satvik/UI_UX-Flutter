@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-class BuyButton extends StatelessWidget {
-  const BuyButton({Key? key}) : super(key: key);
+class Button extends StatelessWidget {
+  final String title;
+  const Button({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(0, 122, 255, 1),
+        color: title == 'BUY'
+            ? const Color.fromRGBO(0, 122, 255, 1)
+            : const Color.fromRGBO(255, 46, 80, 1),
         border: Border.all(
           width: 1.0,
         ),
@@ -16,11 +19,11 @@ class BuyButton extends StatelessWidget {
         ),
       ),
       child: SizedBox(
-        width: 48,
+        width: title == 'BUY' ? 48 : 95,
         height: 28,
         child: TextButton(
           child: Text(
-            'BUY',
+            title,
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w400,

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TileOne extends StatelessWidget {
-  const TileOne({Key? key}) : super(key: key);
+class Tile extends StatelessWidget {
+  final String num1;
+  final String num2;
+  final String num3;
+  const Tile(
+      {Key? key, required this.num1, required this.num2, required this.num3})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,24 +14,24 @@ class TileOne extends StatelessWidget {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
+          children: [
             Text(
-              '7',
-              style: TextStyle(
+              num1,
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 0.87),
                   fontSize: 18,
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              '-',
-              style: TextStyle(
+              num2,
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 0.87),
                   fontSize: 18,
                   fontWeight: FontWeight.w500),
             ),
             Text(
-              '5',
-              style: TextStyle(
+              num3,
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 0.87),
                   fontSize: 18,
                   fontWeight: FontWeight.w500),
