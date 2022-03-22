@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:papr_clip/widgets/dropdown.dart';
+import 'package:papr_clip/widgets/averages_value_column.dart';
+import 'package:papr_clip/widgets/buy_button.dart';
+import 'package:papr_clip/widgets/indictors.dart';
 
 import 'package:papr_clip/widgets/duration_column.dart';
 
 import 'package:papr_clip/widgets/indication_column.dart';
+import 'package:papr_clip/widgets/tile_one.dart';
+import 'package:papr_clip/widgets/title_placeholder.dart';
+import 'package:papr_clip/widgets/value_placeholder.dart';
+
+import '../widgets/dropdown.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +39,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const Dropdown(),
+              const Indictors(),
               const SizedBox(height: 30),
               Text(
                 'Summary',
@@ -52,9 +59,31 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Container(
                       margin: const EdgeInsets.only(right: 25),
-                      child: DurationColumn()),
+                      child: const DurationColumn()),
                 ],
               ),
+              const SizedBox(height: 48),
+              Text(
+                'Moving Averages',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Theme.of(context).textTheme.bodyText1!.color,
+                ),
+              ),
+              const SizedBox(height: 30),
+              const BuyButton(),
+              const SizedBox(height: 12),
+              const TileOne(),
+              const SizedBox(height: 15),
+              const Dropdown(),
+              const SizedBox(height: 16),
+              const TitlePlaceholder(
+                  col1: 'Period', col2: 'Value', col3: 'Type'),
+              const SizedBox(height: 22),
+              const AveragesValueColumn(),
+              const SizedBox(height: 20),
+              const SizedBox(height: 30),
             ],
           ),
         ),

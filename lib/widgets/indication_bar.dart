@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class IndicationBar extends StatefulWidget {
   final String position;
   final Color color;
-  IndicationBar({
+  const IndicationBar({
     Key? key,
     required this.position,
     required this.color,

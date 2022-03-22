@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Dropdown extends StatelessWidget {
-  const Dropdown({Key? key}) : super(key: key);
+class Indictors extends StatelessWidget {
+  const Indictors({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +14,15 @@ class Dropdown extends StatelessWidget {
         ),
         child: DropdownButton<String>(
           borderRadius: BorderRadius.circular(10),
-          items: const [
+          isExpanded: true,
+          items: [
             DropdownMenuItem<String>(
               child: Padding(
-                padding: EdgeInsets.only(top: 9, bottom: 9, left: 12),
+                padding: const EdgeInsets.only(left: 18, bottom: 11, top: 11),
                 child: Text(
-                  'Exponential',
+                  'Technical Indictors',
                   style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 0.87),
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                   ),
@@ -31,12 +32,11 @@ class Dropdown extends StatelessWidget {
           ],
           onChanged: (_) {},
           dropdownColor: const Color.fromRGBO(18, 18, 18, 1),
-          icon: const Padding(
-            padding:
-                EdgeInsets.only(top: 15.0, left: 11, right: 15, bottom: 15),
+          icon: Padding(
+            padding: const EdgeInsets.only(right: 15),
             child: Icon(
               Icons.keyboard_arrow_down,
-              color: Color.fromRGBO(255, 255, 255, 0.87),
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
           ),
