@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:papr_clip/widgets/oscillator_value.dart';
 import 'package:papr_clip/widgets/pivot_value.dart';
 
 class PivotColumn extends StatelessWidget {
