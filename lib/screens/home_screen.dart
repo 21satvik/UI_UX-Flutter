@@ -10,7 +10,6 @@ import 'package:papr_clip/widgets/oscillator_column.dart';
 import 'package:papr_clip/widgets/pivot_column.dart';
 import 'package:papr_clip/widgets/tile.dart';
 import 'package:papr_clip/widgets/title_placeholder.dart';
-import 'package:papr_clip/widgets/value_placeholder.dart';
 
 import '../widgets/dropdown.dart';
 

@@ -19,7 +19,7 @@ class Dropdown extends StatelessWidget {
           items: [
             DropdownMenuItem<String>(
               child: Padding(
-                padding: EdgeInsets.only(top: 9, bottom: 9, left: 12),
+                padding: const EdgeInsets.only(top: 9, bottom: 9, left: 12),
                 child: Text(
                   title,
                   style: const TextStyle(
